@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" >
+<head>
+  <xbasehref="http://220.130.50.232/irvingho/index.php/fellow-biographies" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content=",  search, directory, find" />
+  <meta name="description" content="In memory of Dr. Irving Ho..     This database contains brief information about all Irving T. Ho Fellows who have received an Irving T. Ho Engineering Graduate Fellowship at Stanford University or an Irving T. Ho Memorial Scholarship at National Taiwan University, Tsinghua University, Shanghai Jiao Tong University, or Xiamen University. An invited list of Honorary Irving T. Ho Fellows is also included. Please click on the names to view their respective biographies.    .     This database contains brief information about all Irving T. Ho Fellows who have received an Irving T. Ho Engineering Graduate Fellowship at Stanford University or an Irving T. Ho Memorial Scholarship at National Taiwan University, Tsinghua University, Shanghai Jiao Tong University, or Xiamen University. An invited list of Honorary Irving T. Ho Fellows is also included. Please click on the names to view their respective biographies.    Search function" />
+  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management.  Sigsiu Online Business Index .  Sigsiu Online Business Index " />
+  <title> - Search</title>
+  <link href="favicon.ico" tppabs="http://220.130.50.232/irvingho/templates/themza_j15_13/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="stylesheet" href="mod_vvisit_counter.css" tppabs="http://220.130.50.232/irvingho/modules/mod_vvisit_counter/css/mod_vvisit_counter.css" type="text/css" />
+  <link rel="stylesheet" href="com_sobi2.css" tppabs="http://220.130.50.232/irvingho/components/com_sobi2/includes/com_sobi2.css" type="text/css" />
+  <script type="text/javascript" src="mootools-1.js" tppabs="http://220.130.50.232/irvingho/components/com_sobi2/includes/js/mootools.js"></script>
+  <script type="text/javascript">
+		 /* <![CDATA[ */
+			var Sobi2FieldNames = new Array();
+			
+			function resetSobi2SearchForm() {
+			
+			var SobiCookieRemove = " = 0; expires=0; path=/;";
+							$('sobi2Search').value = "Search ... ";
+				document.cookie = "sobi2SearchCookie[sobi2Search]" + SobiCookieRemove;
+							$("searchphraseany").checked = true;
+				document.cookie = "sobi2SearchCookie[searchphrase]" + SobiCookieRemove;
+							$("sobiCid").value = 0;
+				document.cookie = "sobi2SearchCookie[cid]" + SobiCookieRemove;
+				$("SobiSearchPage").value = 0;
+				document.cookie = "sobi2SearchCookie[SobiSearchPage]" + SobiCookieRemove;
+								for(i=0; i < Sobi2FieldNames.length; i++) {
+					$(Sobi2FieldNames[i]).selectedIndex = 0;
+					document.cookie = "sobi2SearchCookie[" + Sobi2FieldNames[i] + "]" + SobiCookieRemove;
+				}
+								for(SobiSearchFormComboBxCounter; SobiSearchFormComboBxCounter > 0; SobiSearchFormComboBxCounter--) {
+					if(SobiSearchFormComboBxCounter > 0) {
+						chBox = document.getElementById("sdrops_" + SobiSearchFormComboBxCounter);
+						chBox.parentNode.removeChild(chBox);
+					}
+				}
+				SobiSearchFormComboBxCounter = 0;
+				$("SobiCatSelected_0").selectedIndex = 0;
+							}
+		 	window.addEvent('load', function() {
+		 		var sobiSearchResponseContainer = new Fx.Slide('sobiSearchResponseContainer');
+		 					$('sobiSearchFormContainer').addEvent('submit', function(e) {
+					new Event(e).stop();
+					var log = $('sobiSearchResponseContainer').empty().addClass('ajax-loading');
+					var url = "http://220.130.50.232/irvingho/index2.php?" + $('sobiSearchFormContainer').toQueryString();
+					var query = new Ajax(url, {
+						method: 'get',
+						onComplete: function() {
+							log.removeClass('ajax-loading');
+						},
+						update: log
+					});
+					query.request();
+							});
+						});
+			var SobiSearchFormComboBxCounter = 0;
+			var SobiSearchFormCatsChilds = new Array();
+			var SobiSearchFormCatsNames = new Array();
+			function addSobiSearchFormCatBox(cid, c) {
+				if(cid == 0) {
+					if(c == 0) {
+						$("sobiCid").value = cid;
+					}
+					else {
+						box = c - 1;
+						$("sobiCid").value = $("SobiCatSelected_" + box).options[$("SobiCatSelected_" + box).selectedIndex].value;
+					}
+					if(c < SobiSearchFormComboBxCounter) {
+						for(SobiSearchFormComboBxCounter; SobiSearchFormComboBxCounter > c; SobiSearchFormComboBxCounter--) {
+							if(SobiSearchFormComboBxCounter > 0) {
+								chBox = document.getElementById("sdrops_" + SobiSearchFormComboBxCounter);
+								chBox.parentNode.removeChild(chBox);
+							}
+						}
+						SobiSearchFormComboBxCounter = c;
+					}
+				}
+				if(cid != 0) {
+					$("sobiCid").value = cid;
+					url = "http://220.130.50.232/irvingho/index2.php?option=com_sobi2&no_html=1&sobi2Task=SigsiuTreeMenu&Itemid=62&catid=" + cid;
+					SobiSearchFormComboSendRequest(url,c);
+				}
+			}
+						function SobiSearchFormComboSendRequest(url,c) {
+		    	var SobiSearchFormCatHttpRequest;
+		        if (window.XMLHttpRequest) {
+		            SobiSearchFormCatHttpRequest = new XMLHttpRequest();
+		            if (SobiSearchFormCatHttpRequest.overrideMimeType) {
+		                SobiSearchFormCatHttpRequest.overrideMimeType('text/xml');
+		            }
+		        }
+		        else if (window.ActiveXObject) {
+		            try { SobiSearchFormCatHttpRequest = new ActiveXObject("Msxml2.XMLHTTP"); }
+		                catch (e) {
+                           try { SobiSearchFormCatHttpRequest = new ActiveXObject("Microsoft.XMLHTTP"); }
+		                   catch (e) {}
+		                 }
+		        }
+		        if (!SobiSearchFormCatHttpRequest) {
+		            alert('Sorry but I Cannot create an XMLHTTP instance');
+		            return false;
+		        }
+		        SobiSearchFormCatHttpRequest.onreadystatechange = function() {
+			  	if (SobiSearchFormCatHttpRequest.readyState == 4 && SobiSearchFormCatHttpRequest.status == 200)
+			    	SobiSearchFormCatGetSubcats(SobiSearchFormCatHttpRequest,c);
+				};
+		        SobiSearchFormCatHttpRequest.open('GET', url, true);
+		        SobiSearchFormCatHttpRequest.send(null);
+			}
+			function SobiSearchFormCatGetSubcats(XMLDoc,c) {
+				if(!XMLDoc.responseXML) {
+					return null;
+				}
+				var r = XMLDoc.responseXML;
+				var categories = r.getElementsByTagName("category");
+				if(c < SobiSearchFormComboBxCounter) {
+					for(SobiSearchFormComboBxCounter; SobiSearchFormComboBxCounter > c; SobiSearchFormComboBxCounter--) {
+						if(SobiSearchFormComboBxCounter > 0) {
+							chBox = document.getElementById("sdrops_" + SobiSearchFormComboBxCounter);
+							chBox.parentNode.removeChild(chBox);
+						}
+					}
+					SobiSearchFormComboBxCounter = c;
+				}
+				if(categories.length > 0) {
+					SobiSearchFormComboBxCounter++;
+					html = "";
+					html = html + "<div id='sdrops_"+SobiSearchFormComboBxCounter+"'><select class='inputbox catChooseBox' id='SobiCatSelected_" + SobiSearchFormComboBxCounter + "' onclick='addSobiSearchFormCatBox(this.options[this.selectedIndex].value," + SobiSearchFormComboBxCounter + ");'><option value='0'>&nbsp;---- select ----&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>"
+					for(i = 0; i < categories.length; i++) {
+						var category = categories[i];
+						var catid = category.getElementsByTagName('catid').item(0).firstChild.data;
+						var name = category.getElementsByTagName('name').item(0).firstChild.data;
+						var childs = category.getElementsByTagName('childs').item(0).firstChild.data;
+						var pid = category.getElementsByTagName('parentid').item(0).firstChild.data;
+						name = name.replace("\\", "");
+						SobiSearchFormCatsNames[catid] = name;
+						html = html + "<option value='"+catid+"'>"+name+"</option>"
+						SobiSearchFormCatsChilds[catid] = childs;
+					}
+					html = html + "</select>\n\n</div>";
+					span = document.createElement("span");
+					span.innerHTML = html;
+					document.getElementById("SobiSearchForm2dropsy").appendChild(span);
+				}
+							}
+			function sobiSearchRes(page) {
+	 			$('SobiSearchPage').value = page;
+				$('sobiSearchSubmitBt').click();
+			}
+		/* ]]> */
+		</script>
+		<style type="text/css">
+		<!--
+			#sobiSearchResponseContainer.ajax-loading {
+				padding: 20px 0;
+				background: url(spinner.gif)/*tpa=http://220.130.50.232/irvingho/components/com_sobi2/images/spinner.gif*/ no-repeat center;
+			}
+		-->
+		 </style>
+
+<link rel="stylesheet" href="system.css" tppabs="http://220.130.50.232/irvingho/templates/system/css/system.css" type="text/css" />
+<link rel="stylesheet" href="general.css" tppabs="http://220.130.50.232/irvingho/templates/system/css/general.css" type="text/css" />
+<link rel="stylesheet" href="template.css" tppabs="http://220.130.50.232/irvingho/templates/themza_j15_13/css/template.css" type="text/css" />
+<link rel="stylesheet" href="green.css" tppabs="http://220.130.50.232/irvingho/templates/themza_j15_13/css/green.css" type="text/css" />
+<!--[if lte IE 6]>
+<link href="ieonly.css" tppabs="http://220.130.50.232/irvingho/templates/themza_j15_13/css/ieonly.css"  rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+<body id="page_bg">
+<a name="up" id="up"></a>
+<div id="main_bg" class="main_bg_center">
+	<div id="logo_bg"><img src="logo.png" tppabs="http://220.130.50.232/irvingho/templates/themza_j15_13/images/green/logo.png" alt="logo" align="left" hspace="5" />        <a href="index.php.htm" tppabs="http://220.130.50.232/irvingho/index.php" class="logo">Irving T. Ho Memorial Foundation</a>
+        <div id="user4">
+<script language='javascript' type='text/javascript'>
+<!--
+defaultSize = 100;
+//-->
+</script><script type="text/javascript" src="md_stylechanger.js" tppabs="http://220.130.50.232/irvingho/modules/mod_fontsize/js/md_stylechanger.js"></script>
+
+<div id="fontsize">
+  <script type="text/javascript">
+				//<![CDATA[
+					document.write('');
+					document.write(' <a href="index.php.htm"/*tpa=http://220.130.50.232/irvingho/index.php*/ title="Increase size" onclick="changeFontSize(1); return false;" class="larger"><img style="margin:0 padding:0;" src="resizer_01.jpg"/*tpa=http://220.130.50.232/irvingho/modules/mod_fontsize/img/resizer_01.jpg*/ alt="Increase size" /></a>');
+					document.write('<a href="index.php.htm"/*tpa=http://220.130.50.232/irvingho/index.php*/ title="Decrease size" onclick="changeFontSize(-1); return false;" class="smaller"><img style="margin:0 padding:0;" src="resizer_02.jpg"/*tpa=http://220.130.50.232/irvingho/modules/mod_fontsize/img/resizer_02.jpg*/ alt="Increase size" /></a>');
+					document.write('<a href="index.php.htm"/*tpa=http://220.130.50.232/irvingho/index.php*/ title="Reset font size to default" onclick="revertStyles(); return false;" class="reset"><img style="margin:0 padding:0;" src="resizer_03.jpg"/*tpa=http://220.130.50.232/irvingho/modules/mod_fontsize/img/resizer_03.jpg*/ alt="Reset size" /></a>');
+				//]]>
+				</script>
+</div>
+<form action="http://220.130.50.232/irvingho/index.php/index.php" method="post">
+	<div class="search">
+		<input name="searchword" id="mod_search_searchword" maxlength="20" alt="Search" class="inputbox" type="text" size="20" value="search..."  onblur="if(this.value=='') this.value='search...';" onfocus="if(this.value=='search...') this.value='';" />	</div>
+	<input type="hidden" name="task"   value="search" />
+	<input type="hidden" name="option" value="com_search" />
+	<input type="hidden" name="Itemid" value=62 />
+</form></div>
+        <br clear="all" />
+    </div>
+    <div id="user3"><div id="pillmenu"><ul id="mainlevel-nav"><li><a href="about-dr-ho.htm" tppabs="http://220.130.50.232/irvingho/index.php/about-dr-ho" class="mainlevel-nav" >About Dr. Ho</a></li><li><a href="the-foundation.htm" tppabs="http://220.130.50.232/irvingho/index.php/the-foundation" class="mainlevel-nav" >The Foundation</a></li><li><a href="ho-fellows.htm" tppabs="http://220.130.50.232/irvingho/index.php/ho-fellows" class="mainlevel-nav" >Ho Fellows</a></li><li><a href="in-memory.htm" tppabs="http://220.130.50.232/irvingho/index.php/in-memory" class="mainlevel-nav" >In Memory</a></li><li><a href="progress-reports.htm" tppabs="http://220.130.50.232/irvingho/index.php/progress-reports" class="mainlevel-nav" >Progress Reports</a></li><li><a href="fellow-biographies.htm" tppabs="http://220.130.50.232/irvingho/index.php/fellow-biographies" class="mainlevel-nav" id="active_menu-nav">Fellow Biographies</a></li><li><a href="contact-us.htm" tppabs="http://220.130.50.232/irvingho/index.php/contact-us" class="mainlevel-nav" >Contact Us</a></li></ul></div><div id="date">Tuesday 14th of June 2016</div></div>
+	        <div id="banner"></div>
+		<div id="leftcolumn">
+            		<div class="module_menu">
+			<div>
+				<div>
+					<div>
+													<h3>Main Menu</h3>
+											<ul class="menu"><li class="item1"><a href="index.htm" tppabs="http://220.130.50.232/irvingho/"><span>Home</span></a></li><li class="item27"><a href="news.htm" tppabs="http://220.130.50.232/irvingho/index.php/news"><span>News</span></a></li><li class="item2"><a href="books.htm" tppabs="http://220.130.50.232/irvingho/index.php/books"><span>Books</span></a></li><li class="item56"><a href="our-donors.htm" tppabs="http://220.130.50.232/irvingho/index.php/our-donors"><span>Our Donors</span></a></li><li class="item63"><a href="iii-intern.htm" tppabs="http://220.130.50.232/irvingho/index.php/iii-intern"><span>Our III Interns</span></a></li><li class="item58"><a href="action-groups.htm" tppabs="http://220.130.50.232/irvingho/index.php/action-groups"><span>Action Groups</span></a></li><li class="item50"><a href="contact-us.htm" tppabs="http://220.130.50.232/irvingho/index.php/contact-us"><span>Contact Us</span></a></li></ul>					</div>
+				</div>
+			</div>
+		</div>
+			<div class="module">
+			<div>
+				<div>
+					<div>
+											<!-- Vinaora Visitors Counter for Joomla! --><div id="vvisit_counter"><div><img src="3.png" tppabs="http://220.130.50.232/irvingho/modules/mod_vvisit_counter/images/digit_counter/default/3.png" alt="mod_vvisit_counter" title="Vinaora Visitors Counter 2.0" /><img src="6.png" tppabs="http://220.130.50.232/irvingho/modules/mod_vvisit_counter/images/digit_counter/default/6.png" alt="mod_vvisit_counter" title="Vinaora Visitors Counter 2.0" /><img src="8.png" tppabs="http://220.130.50.232/irvingho/modules/mod_vvisit_counter/images/digit_counter/default/8.png" alt="mod_vvisit_counter" title="Vinaora Visitors Counter 2.0" /><img src="4.png" tppabs="http://220.130.50.232/irvingho/modules/mod_vvisit_counter/images/digit_counter/default/4.png" alt="mod_vvisit_counter" title="Vinaora Visitors Counter 2.0" /><img src="2.png" tppabs="http://220.130.50.232/irvingho/modules/mod_vvisit_counter/images/digit_counter/default/2.png" alt="mod_vvisit_counter" title="Vinaora Visitors Counter 2.0" /></div><div><table cellpadding="0" cellspacing="0" style="width: 90%;"><tbody><tr align="left"><td><img src="vtoday.png" tppabs="http://220.130.50.232/irvingho/modules/mod_vvisit_counter/images/stats/default/vtoday.png" alt="mod_vvisit_counter" title="2016-06-14" /></td><td>Today</td><td align="right">2</td></tr><tr align="left"><td><img src="vyesterday.png" tppabs="http://220.130.50.232/irvingho/modules/mod_vvisit_counter/images/stats/default/vyesterday.png" alt="mod_vvisit_counter" title="2016-06-13" /></td><td>Yesterday</td><td align="right">1</td></tr><tr align="left"><td><img src="vweek.png" tppabs="http://220.130.50.232/irvingho/modules/mod_vvisit_counter/images/stats/default/vweek.png" alt="mod_vvisit_counter" title="2016-06-12 -&gt; 2016-06-14" /></td><td>This week</td><td align="right">3</td></tr><tr align="left"><td><img src="vlweek.png" tppabs="http://220.130.50.232/irvingho/modules/mod_vvisit_counter/images/stats/default/vlweek.png" alt="mod_vvisit_counter" title="2016-06-05 -&gt; 2016-06-12" /></td><td>Last week</td><td align="right">24</td></tr><tr align="left"><td><img src="vmonth.png" tppabs="http://220.130.50.232/irvingho/modules/mod_vvisit_counter/images/stats/default/vmonth.png" alt="mod_vvisit_counter" title="2016-06-01 -&gt; 2016-06-14" /></td><td>This month</td><td align="right">36</td></tr><tr align="left"><td><img src="vlmonth.png" tppabs="http://220.130.50.232/irvingho/modules/mod_vvisit_counter/images/stats/default/vlmonth.png" alt="mod_vvisit_counter" title="2016-05-01 -&gt; 2016-06-01" /></td><td>Last month</td><td align="right">11</td></tr><tr align="left"><td><img src="vall.png" tppabs="http://220.130.50.232/irvingho/modules/mod_vvisit_counter/images/stats/default/vall.png" alt="mod_vvisit_counter" title="Vinaora Visitors Counter" /></td><td>All days</td><td align="right">36842</td></tr></tbody></table></div><div><a href="javascript:if(confirm(%27http://vinaora.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://vinaora.com/%27" tppabs="http://vinaora.com/" target="_self" title="Vinaora Visitors Counter 2.0 for Joomla!">Visitors Counter</a></div></div>					</div>
+				</div>
+			</div>
+		</div>
+			<div class="module">
+			<div>
+				<div>
+					<div>
+																</div>
+				</div>
+			</div>
+		</div>
+	
+        <br />
+        <div align="center"></div>
+    </div>
+    	<div id="maincolumn_middle">
+    	<div class="path"><span class="breadcrumbs pathway">
+<a href="index.htm" tppabs="http://220.130.50.232/irvingho/" class="pathway">Home</a> <img src="arrow.png" tppabs="http://220.130.50.232/irvingho/images/M_images/arrow.png" alt=""  /> <a href="fellow-biographies.htm" tppabs="http://220.130.50.232/irvingho/index.php/fellow-biographies" class="pathway">Fellow Biographies</a> <img src="arrow.png" tppabs="http://220.130.50.232/irvingho/images/M_images/arrow.png" alt=""  /> Search</span>
+</div>
+    	<div class="nopad">
+<!-- start of Sigsiu Online Business Index 2 component -->
+<div class="componentheading"></div>
+ <div class='sobi2'> 
+
+
+
+<table class="sobi2Header">
+	<tr>
+		<td id="sobi2HeaderComLink" > <a class="sobi2Header" href="fellow-biographies.htm" tppabs="http://220.130.50.232/irvingho/index.php/fellow-biographies"></a> </td>
+		<td id="sobi2HeaderSearchLink"> <a class="sobi2Header" href="fellow-biographies-sobi2Task=search.htm" tppabs="http://220.130.50.232/irvingho/index.php/fellow-biographies?sobi2Task=search">Search</a> </td>
+		<td id="sobi2HeaderAddLink" > <a class="sobi2Header" href="fellow-biographies-sobi2Task=addNew.htm" tppabs="http://220.130.50.232/irvingho/index.php/fellow-biographies?sobi2Task=addNew">Add Entry</a> </td>
+	</tr>
+</table>
+
+
+
+			<table class="sobi2CompDesc" width="100%">
+				<tr>
+					<td>
+											<p><!--[if gte mso 9]><xml> <o:OfficeDocumentSettings> <o:AllowPNG /> </o:OfficeDocumentSettings> </xml><![endif]--></p>
+<p><!--[if gte mso 9]><xml> <w:WordDocument> <w:View>Normal</w:View> <w:Zoom>0</w:Zoom> <w:TrackMoves /> <w:TrackFormatting /> <w:PunctuationKerning /> <w:ValidateAgainstSchemas /> <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid> <w:IgnoreMixedContent>false</w:IgnoreMixedContent> <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText> <w:DoNotPromoteQF /> <w:LidThemeOther>EN-US</w:LidThemeOther> <w:LidThemeAsian>X-NONE</w:LidThemeAsian> <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript> <w:Compatibility> <w:BreakWrappedTables /> <w:SnapToGridInCell /> <w:WrapTextWithPunct /> <w:UseAsianBreakRules /> <w:DontGrowAutofit /> <w:SplitPgBreakAndParaMark /> <w:EnableOpenTypeKerning /> <w:DontFlipMirrorIndents /> <w:OverrideTableStyleHps /> </w:Compatibility> <m:mathPr> <m:mathFont m:val="Cambria Math" /> <m:brkBin m:val="before" /> <m:brkBinSub m:val=" " /> <m:smallFrac m:val="off" /> <m:dispDef /> <m:lMargin m:val="0" /> <m:rMargin m:val="0" /> <m:defJc m:val="centerGroup" /> <m:wrapIndent m:val="1440" /> <m:intLim m:val="subSup" /> <m:naryLim m:val="undOvr" /> </m:mathPr></w:WordDocument> </xml><![endif]--><!--[if gte mso 9]><xml> <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"   DefSemiHidden="true" DefQFormat="false" DefPriority="99"   LatentStyleCount="267"> <w:LsdException Locked="false" Priority="0" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Normal" /> <w:LsdException Locked="false" Priority="9" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="heading 1" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9" /> <w:LsdException Locked="false" Priority="39" Name="toc 1" /> <w:LsdException Locked="false" Priority="39" Name="toc 2" /> <w:LsdException Locked="false" Priority="39" Name="toc 3" /> <w:LsdException Locked="false" Priority="39" Name="toc 4" /> <w:LsdException Locked="false" Priority="39" Name="toc 5" /> <w:LsdException Locked="false" Priority="39" Name="toc 6" /> <w:LsdException Locked="false" Priority="39" Name="toc 7" /> <w:LsdException Locked="false" Priority="39" Name="toc 8" /> <w:LsdException Locked="false" Priority="39" Name="toc 9" /> <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption" /> <w:LsdException Locked="false" Priority="10" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Title" /> <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font" /> <w:LsdException Locked="false" Priority="11" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Subtitle" /> <w:LsdException Locked="false" Priority="0" Name="Hyperlink" /> <w:LsdException Locked="false" Priority="22" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Strong" /> <w:LsdException Locked="false" Priority="20" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Emphasis" /> <w:LsdException Locked="false" Priority="0" Name="Plain Text" /> <w:LsdException Locked="false" Priority="59" SemiHidden="false"    UnhideWhenUsed="false" Name="Table Grid" /> <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text" /> <w:LsdException Locked="false" Priority="1" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="No Spacing" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading Accent 1" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List Accent 1" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid Accent 1" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1 Accent 1" /> <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision" /> <w:LsdException Locked="false" Priority="34" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="List Paragraph" /> <w:LsdException Locked="false" Priority="29" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Quote" /> <w:LsdException Locked="false" Priority="30" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Intense Quote" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2 Accent 1" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List Accent 1" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading Accent 1" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List Accent 1" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid Accent 1" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading Accent 2" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List Accent 2" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid Accent 2" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1 Accent 2" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2 Accent 2" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List Accent 2" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading Accent 2" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List Accent 2" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid Accent 2" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading Accent 3" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List Accent 3" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid Accent 3" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1 Accent 3" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2 Accent 3" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List Accent 3" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading Accent 3" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List Accent 3" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid Accent 3" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading Accent 4" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List Accent 4" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid Accent 4" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1 Accent 4" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2 Accent 4" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List Accent 4" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading Accent 4" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List Accent 4" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid Accent 4" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading Accent 5" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List Accent 5" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid Accent 5" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1 Accent 5" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2 Accent 5" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List Accent 5" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading Accent 5" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List Accent 5" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid Accent 5" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading Accent 6" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List Accent 6" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid Accent 6" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1 Accent 6" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2 Accent 6" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List Accent 6" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading Accent 6" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List Accent 6" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid Accent 6" /> <w:LsdException Locked="false" Priority="19" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis" /> <w:LsdException Locked="false" Priority="21" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis" /> <w:LsdException Locked="false" Priority="31" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference" /> <w:LsdException Locked="false" Priority="32" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Intense Reference" /> <w:LsdException Locked="false" Priority="33" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Book Title" /> <w:LsdException Locked="false" Priority="37" Name="Bibliography" /> <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading" /> </w:LatentStyles> </xml><![endif]--><!--[if gte mso 10]> <mce:style><!   /* Style Definitions */  table.MsoNormalTable 	{mso-style-name:"Table Normal"; 	mso-tstyle-rowband-size:0; 	mso-tstyle-colband-size:0; 	mso-style-noshow:yes; 	mso-style-priority:99; 	mso-style-parent:""; 	mso-padding-alt:0in 5.4pt 0in 5.4pt; 	mso-para-margin:0in; 	mso-para-margin-bottom:.0001pt; 	mso-pagination:widow-orphan; 	font-size:10.0pt; 	font-family:"Times New Roman","serif";} --> <!--[endif] --></p>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 9.0pt; font-family: ">This database contains brief information about all Irving T. Ho Fellows who have received an Irving T. Ho Engineering Graduate Fellowship at Stanford University or an Irving T. Ho Memorial Scholarship at National Taiwan University, Tsinghua University, Shanghai Jiao Tong University, or Xiamen University. An invited list of Honorary Irving T. Ho Fellows is also included. Please click on the names to view their respective biographies.</span><span style="font-size: 9.0pt; font-family: "> </span></p>
+<p> </p>					</td>
+				</tr>
+			</table>
+				<form id="sobiSearchFormContainer" accept-charset="utf8" action="http://220.130.50.232/irvingho/index2.php" method="get" name="sobiSearchFormContainer">
+			<table class="sobi2eSearchForm">
+			<tr>
+				<td id="sobi2eSearchLabel">Search for: </td>
+				<td id="sobi2eSearchBox">
+											<input name="sobi2Search" id="sobi2Search" class="inputbox" value="Search ... " onclick="if (this.value == 'Search ... ') this.value = '';" onblur="if (this.value == '') this.value = 'Search ... ';"/>
+									</td>
+				<td id="sobi2eSearchButton">
+											<input type="submit" id="sobiSearchSubmitBt" name="search"  onmousedown="$('SobiSearchPage').value = 0" onkeydown="$('SobiSearchPage').value = 0" class="button" value="Search"/>
+									</td>
+				<td id="sobi2eSearchEmptyCell">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4" id="sobi2eSearchPhrases">
+									<input type="radio" checked="checked" name="searchphrase" id="searchphraseany" value="any"   />
+					<label for="searchphraseany">Any words</label>
+													<input type="radio"  name="searchphrase" id="searchphraseall" value="all"  />
+					<label for="searchphraseall">All words</label>
+													<input type="radio"  name="searchphrase" id="searchphraseexact" value="exact"  />
+					<label for="searchphraseexact">Exact phrase</label>
+								</td>
+			</tr>
+			<tr>
+				<td colspan="4" id="sobi2eSearchButtonLine">
+													<input type="button" id="sobiSearchFormReset" class="button" name="sobiSearchFormReset" title="Clear search form selections" value="Clear Selections" onclick="resetSobi2SearchForm()"/>
+					<br/><br/>
+				</td>
+			</tr>
+			</table>
+			<div id="sobiSearchFormExtOpt">
+			<table class="sobi2eSearchForm">
+									<tr>
+				<td style="vertical-align:top;">Select Category</td>
+				<td colspan='2'>
+										<div id="SobiSearchForm2dropsy" style="margin-left: 0px;">
+
+
+
+<div id='sdrops_0'>
+<select name="SobiCatSelected_0" id="SobiCatSelected_0" size="1" class="inputbox catChooseBox" onclick="addSobiSearchFormCatBox(this.options[this.selectedIndex].value,0);" >
+	<option value="0" >&nbsp;---- select ----&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+	<option value="2" >Fellows</option>
+</select>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+ 
+ SobiSearchFormCatsChilds[2] = '0';
+
+ SobiSearchFormComboBxCounter = 0; 
+
+</script></div>								</td>
+			</tr>
+									</table>
+			</div>
+						<input type="hidden" name="option" value="com_sobi2"/>
+			<input type="hidden" name="Itemid" value="62"/>
+			<input type="hidden" name="no_html" value="1"/>
+			<input type="hidden" name="sobi2Task" value="axSearch"/>
+			<input type="hidden" name="sobiCid" id="sobiCid" value="0"/>
+			<input type="hidden" id="SobiSearchPage" name="SobiSearchPage" value="0"/>
+	</form>
+	<div id="sobiSearchResponseContainer"></div>
+	
+ </div> 
+
+<!-- end of Sigsiu Online Business Index 2 component Memory 2,556,360 / Time 0.19626688957214 / Queries: 0 --> 
+</div>
+    </div>
+	<div id="rightcolumn">
+        </div>
+
+		
+    <br clear="all" />
+
+
+<!--
+<p id="power_by" align="center">
+	Powered by <a href="http://www.joomla.org">Joomla!</a>.
+    Designed by: <a href="http://www.themza.com/joomla1.5/back-to-nature-template.html" target="_blank" title="Back to Nature template">Free Joomla 1.5 Theme</a>, <a href="http://www.ntchosting.com/domains/cc.html" target="_blank" title="Cocos Islands country-code top-level-domain services ($40 per year)">cc top level domain</a>.&nbsp;Valid <a href="http://validator.w3.org/check/referer">XHTML</a> and <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>.
+</p>
+-->
+
+
+
+</div>
+</body>
+</html>

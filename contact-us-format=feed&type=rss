@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! 1.5 - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Contact Us</title>
+		<description>In memory of Dr. Irving Ho.</description>
+		<link>http://220.130.50.232/irvingho/index.php/contact-us</link>
+		<lastBuildDate>Tue, 14 Jun 2016 14:11:21 +0000</lastBuildDate>
+		<generator>Joomla! 1.5 - Open Source Content Management</generator>
+		<language>en-gb</language>
+		<managingEditor>pallavgupta@gmail.com (Irving Ho Foundation Project)</managingEditor>
+		<item>
+			<title>L.-T. Wang (王榮騰)</title>
+			<link>http://220.130.50.232/irvingho/index.php/contact-us/12-contacts/3-l-t-wang</link>
+			<guid>http://220.130.50.232/irvingho/index.php/contact-us/12-contacts/3-l-t-wang</guid>
+			<description><![CDATA[CEO - ]]></description>
+			<category>Contacts</category>
+		</item>
+		<item>
+			<title>Bang Ho (何邦立)</title>
+			<link>http://220.130.50.232/irvingho/index.php/contact-us/12-contacts/14-bang-ho-</link>
+			<guid>http://220.130.50.232/irvingho/index.php/contact-us/12-contacts/14-bang-ho-</guid>
+			<description><![CDATA[ - ]]></description>
+			<category>Contacts</category>
+		</item>
+	</channel>
+</rss>

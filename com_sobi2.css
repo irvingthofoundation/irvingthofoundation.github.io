@@ -1,0 +1,759 @@
+/**
+* @version $Id: com_sobi2.css 4820 2009-01-05 11:46:25Z Radek Suski $
+* @package: Sigsiu Online Business Index 2 */
+/**
+* Style Sheet of SOBI 2 Component com_sobi2.css
+* ---------------------------------------------------------------------------
+* @copyright Copyright (C) 2007 Sigsiu.NET (www.sigsiu.net). All rights reserved.
+* Authors: Sigrid & Radek Suski, Sigsiu.NET */
+
+/* main SOBI2 Style to overwrite standard styles */
+
+div.sobi2 {
+}
+div.sobi2 h1 {
+	line-height: 24px;
+	font-size: 22px;
+}
+div.sobi2 h2,
+div.sobi2 h3,
+div.sobi2 h4 {
+	padding-left: 5px;
+}
+
+/* Style for Standard Joomla! mosmsg-class, because often undefined */
+/* To use the style of your template, delete this entry. */
+/*
+.message {
+	padding: 5px;
+	background-color: #990000;
+	color: #FFFFFF;
+	font-size: 11px;
+	font-weight: bold;
+}
+*/
+/* if there is no mosmsg line defined by your template remove the display:none and SOBI2 will show its own mosmsg line */
+#sobimsg {
+	display:none;
+}
+
+/* Style of the Header Menu */
+/* -------------------------------------------------------- */
+/* Style of Header Menu */
+table.sobi2Header {
+	border-style: none;
+}
+a.sobi2Header {
+	padding: 5px;
+	font-size: 14px;
+}
+
+/* Style of Main Component Description */
+/* -------------------------------------------------------- */
+table.sobi2CompDesc {
+	padding: 5px;
+	width: 98%;
+}
+
+/* Style of Category List */
+/* -------------------------------------------------------- */
+table#sobi2CatListSymbols {
+	width: 98%;
+}
+table#sobi2CatListSymbols td {
+	vertical-align: top;
+	border-style: none;
+}
+
+/* Style of Category Icon */
+img.sobi2CatIco {
+	border-style: none;
+	float: left;
+	clear: left;
+}
+
+/* Style of Category Name */
+p.sobi2CatName {
+	font-size: 13px;
+	padding-left: 50px;
+	margin: 2px 0 2px 0;
+}
+/* Style of Category Introtext */
+p.sobi2CatsListSymbolsIntrotext {
+	font-size: 11px;
+	padding-left: 50px;
+	margin-top: 4px;
+}
+
+span.sobi2SubcatsList {
+	display:block;
+}
+
+/* Style of the shown entries/subcategories numbers */
+span.sobi2EditlinktipItems {
+	text-decoration:  none;
+	border-bottom: 1px dashed #aaa;
+	padding-left:5px;
+}
+span.sobi2EditlinktipCats {
+	text-decoration:  none;
+	border-bottom: 1px dashed #aaa;
+}
+
+
+/* Style for Entries in Category View (Cards View) */
+/* -------------------------------------------------------- */
+table.sobi2Listing {
+	width: 98%;
+	margin-bottom: 10px;
+}
+table.sobi2Listing td {
+	border-style: none;
+	border-color: #3a4794;
+	border-width: 2px;
+	margin-top: 0px;
+	vertical-align: top;
+}
+
+/* Style for empty Cards (Placeholder) */
+table.sobi2Listing td.sobi2EmptyCell {
+	border-style: none;
+	background-color: #ffffff;
+}
+table.sobi2Listing input {
+	float:left;
+}
+
+/* Style of Icon (Small Image) */
+.sobi2Listing img {
+	float: right;
+	border-style: none;
+	padding-top: 5px;
+	padding-right: 5px;
+}
+
+/* Style of Title (Name of Entry) */
+p.sobi2ItemTitle {
+	margin-left: 5px;
+	margin-top:  5px;
+	padding-left: 5px;
+	padding-top: 5px;
+	clear:left;
+}
+p.sobi2ItemTitle a {
+ 	font-size: 13px;
+}
+
+/* Styles for the fields */
+/* Add style for each field you added in the form span.sobi2Listing_field_yourname */
+span.sobi2Listing_field_street,
+span.sobi2Listing_field_postcode,
+span.sobi2Listing_field_county,
+span.sobi2Listing_field_country,
+span.sobi2Listing_field_email,
+span.sobi2Listing_field_contact_person,
+span.sobi2Listing_field_phone,
+span.sobi2Listing_field_fax,
+span.sobi2Listing_field_city,
+span.sobi2Listing_field_hotline,
+span.sobi2Listing_field_phone,
+span.sobi2Listing_field_federal_state {
+	padding-left: 10px;
+}
+span.sobi2Listing_field_website {
+	float:right;
+	padding-right: 5px;
+	margin-bottom: 15px;
+}
+
+/* Styles for the labels of the fields */
+/* Add style for each field you added in the form span.sobi2Listing_field_yourname_label */
+span.sobi2Listing_field_street_label,
+span.sobi2Listing_field_postcode_label,
+span.sobi2Listing_field_county_label,
+span.sobi2Listing_field_country_label,
+span.sobi2Listing_field_email_label,
+span.sobi2Listing_field_contact_person_label,
+span.sobi2Listing_field_phone_label,
+span.sobi2Listing_field_fax_label,
+span.sobi2Listing_field_city_label,
+span.sobi2Listing_field_hotline_label,
+span.sobi2Listing_field_phone_label,
+span.sobi2Listing_field_federal_state_label,
+span.sobi2Listing_field_website_label {
+	font-weight: normal;
+}
+
+
+/* Style of Edit and Delete Buttons in Category View */
+input.sobi2EditEntryButton {
+}
+
+/* Style for Page Navigation of Entries */
+#sobi2PageNav {
+	text-align: center;
+}
+
+
+/* Style of Details View */
+/* -------------------------------------------------------- */
+table.sobi2Details {
+	margin-top: 15px;
+	margin-left: 5px;
+	padding: 10px;
+	width: 98%;
+}
+/* Style of Entry Name */
+table.sobi2Details h1 {
+	padding-top: 5px;
+}
+
+/* Container for all custom fields data */
+div#sobi2outer{
+	float: left;
+	margin-top: 0px;  /* position it vertically */
+	padding-bottom: 5px; /* to fix IE bug */
+}
+
+/* Style of the Image */
+img.sobi2DetailsImage{
+	border-style: none;
+	float: right;
+	padding-right: 5px;
+	padding-top: 5px;
+}
+img.sobi2DetailsIcon {
+}
+
+/* Styles for the fields */
+/* Add style for each field you added in the form span#sobi2Details_field_yourname */
+span#sobi2Details_field_myfield,
+span#sobi2Details_field_street,
+span#sobi2Details_field_postcode,
+span#sobi2Details_field_county,
+span#sobi2Details_field_country,
+span#sobi2Details_field_phone,
+span#sobi2Details_field_fax,
+span#sobi2Details_field_city,
+span#sobi2Details_field_hotline,
+span#sobi2Details_field_phone,
+span#sobi2Details_field_contact_person,
+span#sobi2Details_field_federal_state {
+	font-size: 12px;
+}
+span#sobi2Details_field_website,
+span#sobi2Details_field_email {
+	padding-top: 8px;
+	display: block;
+}
+span#sobi2Details_field_description {
+	display:block;
+	padding-top: 20px;
+	margin-top: 0px; /* position it vertically */
+}
+
+/* Styles for the labels of the fields */
+/* Add style for each field you added in the form span#sobi2Listing_field_yourname_label */
+span#sobi2Listing_field_street_label,
+span#sobi2Listing_field_postcode_label,
+span#sobi2Listing_field_county_label,
+span#sobi2Listing_field_country_label,
+span#sobi2Listing_field_email_label,
+span#sobi2Listing_field_contact_person_label,
+span#sobi2Listing_field_phone_label,
+span#sobi2Listing_field_fax_label,
+span#sobi2Listing_field_city_label,
+span#sobi2Listing_field_hotline_label,
+span#sobi2Listing_field_phone_label,
+span#sobi2Listing_field_federal_state_label,
+span#sobi2Listing_field_website_label {
+	font-weight: bold;
+}
+
+/* Style for Way Search */
+span.sobi2WaySearch {
+	border-style: none;
+	float: right;
+	clear: right;
+	margin-top: 15px; /* position it vertically */
+	display: block;
+	padding-right: 5px;
+}
+span.sobi2WaySearch img {
+	padding-top: 8px;
+	border-style: none;
+	padding-left: 17px;
+}
+
+/* Style for Google Maps */
+div#sobi2GoogleMaps {
+	float: right;
+	position: relative;
+	border: 1px solid #333333;
+	margin-top: 30px;
+	margin-right: 5px;
+}
+
+/* Style of Details Footer Line */
+td.sobi2DetailsFooter {
+	padding-left: 5px;
+}
+
+/* Style of Edit and Delete Buttons in Details View */
+input#sobi2EditEntryButton, input#sobi2DelEntryButton {
+	float:right;
+}
+
+
+/* Style of Footer Line */
+/* -------------------------------------------------------- */
+td#sobi2Footer, td#sobi2Footer a {
+	font-size: 9px;
+	color: #999999;
+	padding-top: 10px;
+	text-decoration: none;
+}
+table.sobi2Footer {
+	width: 98%;
+}
+td#sobi2rss {
+}
+td#sobi2rss img {
+	border-style: none;
+	float: right;
+}
+
+/* Style of Entry Form */
+/* -------------------------------------------------------- */
+/* Header Line */
+p#sobi2EditFormHeader {
+	font-weight:bold;
+	font-size: 14px;
+	padding: 5px;
+}
+
+/* Info Requested Fields */
+#sobi2ReqFieldsInfo {
+	padding: 5px;
+}
+
+form#sobi2EditForm table,
+table#sobi2FormTable {
+	padding: 5px;
+	width: 99%;
+}
+table#sobi2FormTable2, table#sobi2FormTable3 {
+    width: 99%;
+}
+table#sobi2FormTable td,
+table#sobi2FormTable2 td,
+table#sobi2FormTable3 td {
+	vertical-align: top;
+}
+
+/* Style of Input fields as entered in Fields Manager  */
+input#field_entry_name,
+input#field_postcode,
+input#field_street,
+input#field_city,
+input#field_county,
+input#field_country,
+input#field_federal_state,
+input#field_email,
+input#field_website,
+input#field_contact_person,
+input#field_phone,
+textarea#sobi2MetaKey,
+textarea#sobi2MetaDesc,
+input#sobi2Ico,
+input#sobi2Img,
+input#field_fax,
+input#field_hotline,
+input#field_street {
+}
+
+label.field_entry_name,
+label.field_postcode,
+label.field_street,
+label.field_city,
+label.field_county,
+label.field_country,
+label.field_federal_state,
+label.field_email,
+label.field_website,
+label.field_contact_person,
+label.field_phone,
+label.field_fax,
+label.field_hotline,
+label.field_description,
+label.sobi2Ico,
+label.sobi2Img,
+label.sobi2MetaKey,
+label.sobi2MetaDesc {
+}
+
+/* Style for Checkboxes */
+input#accept_rules,
+input#field_website_on,
+input#field_description_on {
+}
+
+/* Style for Not Free Label */
+span.sobi2FormNotFreeLabel {
+	display: block;
+	padding-top: 5px;
+}
+
+/* Style for Category Information/Descriptions */
+table#sobi2FormCats {
+	width: 99%;
+	border-style: none;
+	margin: 10px;
+}
+table#sobi2FormCats td {
+	padding: 10px;
+	border-style: solid;
+	border-color: #CCCCCC;
+	border-width: 1px;
+}
+p#catsTitle, p#catIntroText {
+	width: 98%;
+	font-size: 12px;
+	font-weight: bold;
+}
+p#catMsg {
+	width: 98%;
+}
+
+/* Style for Add and Remove Button */
+#sobi2AddCatBt, #sobi2RemoveCatBt {
+	width:50px;
+}
+/* Style for column with Buttons */
+td.sobi2CatButtons {
+	width: 50px;
+	vertical-align: top;
+}
+
+/* Style for column with selected Categories */
+td.sobi2CatSelected {
+	vertical-align: top;
+	width: 150px;
+}
+/* Styles for the box with Selected Categories */
+select#sobi2SlectedCats {
+	height: 100px;
+	width: 150px;
+}
+select#sobi2SlectedCatsID {
+	height: 0px;
+	width:  0px;
+	border-style: none;
+}
+
+/* Style for Safety Line */
+table#sobi2FormFooter {
+	float: left;
+	clear: left;
+}
+table#sobi2FormFooter td {
+	vertical-align: bottom;
+}
+img#seccode {
+}
+input#sobi2SendButton {
+	float: right;
+}
+input#sobi2CancelButton {
+	float: right;
+}
+
+/* Style for Payment Info */
+/* -------------------------------------------------------- */
+/* Style for upload info */
+p.sobi2msg {
+	padding-top: 15px;
+	padding-left: 5px;
+	font-size: 12px;
+}
+/* Container for all payment info */
+div.sobi2PaymentContainer {
+	width: 98%;
+}
+
+/* Style for Summary of Costs */
+table#sobi2Payment {
+	width: 50%;
+	margin-left: 5px;
+	padding-right: 5px;
+}
+table#sobi2Payment td,
+td.sobi2PayOption {
+	width: 70%;
+	text-align: right;
+}
+td.sobi2PayFees {
+	width: 30%;
+	text-align: right;
+}
+td#sobi2PayTotal {
+	width: 30%;
+	text-align: right;
+	border-top: solid 1px #606060;
+	font-weight: bold;
+	color: red;
+}
+
+/* Style for Payment Methods */
+table#sobi2PaymentMethod {
+	width: 70%;
+	margin-top: 30px;
+	margin-left: 5px;
+}
+table#sobi2PaymentMethod img {
+	border-style: none;
+}
+table#sobi2PaymentMethod a:hover {
+	font-style: normal;
+	text-decoration: none;
+}
+table#sobi2PaymentMethodBank,
+table#sobi2PaymentMethodPayPal {
+	width: 60%;
+	margin-top: 15px;
+	border-style: none;
+}
+td#sobi2PaymentMethodBank,
+td#sobi2PaymentMethodPayPal {
+	text-align: left;
+	vertical-align: top;
+	border-style: none;
+}
+td#sobi2PaymentMethodBank b {
+	padding-bottom: 3px;
+	display: block;
+}
+
+
+/* Styles for Searching */
+/* -------------------------------------------------------- */
+table.sobi2eSearchForm {
+	width: 95%;
+	margin-left: 5px;
+}
+
+span#sobi2SearchResultsSerchingString {
+	font-weight: bold;
+}
+div#sobiSearchResponseContainer table {
+	width:95%;
+}
+
+/* Styles for the new extended search function */
+/* -------------------------------------------------------- */
+/* height of the Div of category chooser */
+div#sobiSearchFormCatsSelection {
+}
+/* select boxes with categories */
+.catChooseBox {
+}
+#sobiSearchFormExtOptToggle {
+	display: inline;
+}
+div#SobiSearchForm2dropsy {
+	margin-left: 10px;
+}
+/* Label for the search box */
+td#sobi2eSearchLabel {
+	width: 75px;
+}
+td#sobi2eSearchBox {
+}
+td#sobi2eSearchButton {
+}
+td#sobi2eSearchEmptyCell {
+	width: 50%;
+}
+td#sobi2eSearchPhrases,
+td#sobi2eSearchButtonLine {
+	width: 100%;
+}
+/* Label for the fields */
+td.sobi2eSearchLabel {
+	width: 150px;
+}
+
+
+/* Style for the Menu Module */
+/* -------------------------------------------------------- */
+div.sobi2MenuMod {
+	margin-bottom: 8px;
+	margin-top: 10px;
+}
+
+/* Style for the Search & Add Entry Links */
+a.sobi2MenuModA {
+	margin-left: 20px;
+	font-family: Arial, Verdana,  Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+
+/* Style of dTree 2.05 */
+/* Copyright (c) 2002-2003 Geir Landr??? */
+/* -------------------------------------------------------- */
+.dtree {
+	font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666;
+	white-space: nowrap;
+	overflow: auto;
+}
+.dtree img {
+	border: 0px;
+	vertical-align: middle;
+}
+.dtree a {
+	color: #333;
+	text-decoration: none;
+	font-weight: normal;
+}
+.dtree a.node, .dtree a.nodeSel {
+	white-space: nowrap;
+	padding: 1px 2px 1px 2px;
+}
+.dtree a.node:hover, .dtree a.nodeSel:hover {
+	color: #333333;
+	text-decoration: underline;
+}
+.dtree a.nodeSel {
+	background-color: #c0d2ec;
+}
+.dtree .clip {
+	overflow: hidden;
+}
+a.treeNode:hover {
+	color: #333333;
+	text-decoration: none;
+	font-weight: normal;
+}
+a.treeNode:visited {
+	color: #333333;
+	text-decoration: none;
+	font-weight: normal;
+}
+a.treeNode:active, a.treeNode:focus {
+	color: #333333;
+	text-decoration: none;
+	font-weight: normal;
+	background-color: #c0d2ec;
+}
+
+
+/* Styles for SigsiuTree */
+/* -------------------------------------------------------- */
+.sigsiuTree {
+	font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666;
+	white-space: nowrap;
+	overflow: auto;
+}
+.sigsiuTree img {
+	border: 0px;
+	vertical-align: middle;
+}
+.sigsiuTree a {
+	color: #333;
+	text-decoration: none;
+	font-weight: normal;
+}
+.sigsiuTree a.node, .sigsiuTree a.nodeSel {
+	white-space: nowrap;
+	padding: 1px 2px 1px 2px;
+}
+.sigsiuTree a.node:hover, .sigsiuTree a.nodeSel:hover {
+	color: #333333;
+	text-decoration: underline;
+}
+.sigsiuTree a.nodeSel {
+	background-color: #c0d2ec;
+}
+.sigsiuTree .clip {
+	overflow: hidden;
+}
+div.sigsiuTree a, .sigsiuTree a, a.treeNode:hover, a.treeNode, a.treeNode:visited {
+	color: #333333 !important;
+	text-decoration: none !important;
+	font-weight: normal !important;
+}
+a.treeNode:active, a.treeNode:focus {
+	color: #333333;
+	text-decoration: none;
+	font-weight: normal;
+	background-color: #c0d2ec;
+}
+
+
+/* Styles for custom listings */
+/* -------------------------------------------------------- */
+div.sobi2CustomListingCatsHeader,
+div.sobi2CustomListingItemsHeader {
+	padding-left: 5px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+div.sobi2CustomListingHeader {
+	padding-left: 5px;
+	font-size: 15px;
+	margin-bottom: 15px;
+	margin-top: 5px;
+}
+div#sobi2AlphaLinks {
+	width: 98%;
+	text-align: center;
+	padding: 5px;
+	padding-bottom: 15px;
+}
+
+
+/* Styles for the plugin container */
+/* -------------------------------------------------------- */
+table.sobi2Listing_plugins {
+	border-style:none;
+	width: 98%;
+	padding-left: 8px;
+}
+div.sobi2FormTabHeader {
+	padding: 5px 2px 2px 5px;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: bold;
+}
+div.sobi2FormtabContent {
+	overflow: hidden;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+/* Labels */
+/* -------------------------------------------------------- */
+span.sobiNewLabel {
+	color: rgb(51, 51, 255);
+	font-size: 12px;
+	font-weight: bold;
+	padding: 2px;
+}
+span.sobiHotLabel {
+	color: rgb(255, 0, 0);
+	font-size: 12px;
+	font-weight: bold;
+	padding: 2px;
+}
+span.sobiUpdatedLabel {
+	color: rgb(0, 153, 0);
+	font-size: 12px;
+	font-weight: bold;
+	padding: 2px;
+}

@@ -1,0 +1,103 @@
+@charset "utf-8";
+/*** green ***/
+a:link, a:visited {
+	color: #7B8A2B;
+	text-decoration:underline;
+}
+
+a:hover {
+	color: #7B8A2B;
+	text-decoration:none;
+}
+
+#page_bg {
+	background: #FFFFFF url(bg_page.png)/*tpa=http://220.130.50.232/irvingho/templates/themza_j15_13/images/green/bg_page.png*/ top repeat-x;
+}
+
+.search{
+	background: url(search_ico.png)/*tpa=http://220.130.50.232/irvingho/templates/themza_j15_13/images/green/search_ico.png*/ right top no-repeat;
+}
+#pillmenu li a{
+	color: #6B7D0E;
+}
+#pillmenu li a:hover, #pillmenu li a#active_menu-nav{
+	background: url(menu_hover.png)/*tpa=http://220.130.50.232/irvingho/templates/themza_j15_13/images/green/menu_hover.png*/ top repeat-x;
+	color: #FFFFFF;
+}
+#banner{
+	background: #FFFFFF url(banner.jpg)/*tpa=http://220.130.50.232/irvingho/templates/themza_j15_13/images/green/banner.jpg*/ center top no-repeat;
+}
+
+div.module_menu h3, div.module h3, #rightcolumn h3{
+	background:  url(bg_h3.png)/*tpa=http://220.130.50.232/irvingho/templates/themza_j15_13/images/green/bg_h3.png*/ top left no-repeat;
+}
+
+#f_area{
+	background: #7F9434 url(bg_f_area.png)/*tpa=http://220.130.50.232/irvingho/templates/themza_j15_13/images/green/bg_f_area.png*/ bottom right no-repeat;
+	border-top: 3px solid #485313;
+}
+
+a.readon, a.readon:hover, a.readon:visited{
+	display:block;
+	height:23px;
+	width:109px;
+	color:#FFFFFF;
+	text-decoration:underline;
+	padding-left: 23px;
+	line-height:23px;
+	background:  url(bg_read_more.png)/*tpa=http://220.130.50.232/irvingho/templates/themza_j15_13/images/green/bg_read_more.png*/ top left no-repeat;
+	margin:10px 0px 0px 0px;
+}
+
+#power_by, #power_by a, #power_by a:visited{
+	color:#B9B9B9;
+	text-decoration:none;
+	font-size:11px;
+}
+ul.menu li{
+	list-style:none;
+	/*background:url(../images/green/menu_arrow.gif) top left no-repeat;*/
+}
+/*#f_area ul.menu li{
+	list-style:none;
+	background:url(../images/green/menu_arrow.gif) top left no-repeat;
+}*/
+ul.mostread li{
+	list-style:none;
+	background:url(menu_arrow.gif)/*tpa=http://220.130.50.232/irvingho/templates/themza_j15_13/images/green/menu_arrow.gif*/ top left no-repeat;
+}
+ul.latestnews li{
+	list-style:none;
+	background:url(menu_arrow.gif)/*tpa=http://220.130.50.232/irvingho/templates/themza_j15_13/images/green/menu_arrow.gif*/ top left no-repeat;
+}
+.moduletable ul li {
+	list-style:none;
+	background:url(menu_arrow.gif)/*tpa=http://220.130.50.232/irvingho/templates/themza_j15_13/images/green/menu_arrow.gif*/ top left no-repeat;
+}
+#f_area div.moduletable_menu ul.menu {
+	padding:10px 0px 10px 0px;
+	margin:0px;
+	background:none;
+}
+
+#f_area div.moduletable_menu ul.menu li {
+	padding:0px 0px 0px 20px;
+	margin:0px;	
+	line-height:18px;
+	background:url(menu_arrow.gif)/*tpa=http://220.130.50.232/irvingho/templates/themza_j15_13/images/green/menu_arrow.gif*/ top left no-repeat;
+	border-bottom:none;
+}
+#f_area a:link, #f_area a:visited {
+	color: #FFFFFF;
+	text-decoration:underline;
+}
+
+#f_area a:hover {
+	color: #FFFFFF;
+	text-decoration:none;
+}
+div.componentheading{
+	color:#4E6412;
+	font-size:17px;
+	font-weight:normal;
+}
