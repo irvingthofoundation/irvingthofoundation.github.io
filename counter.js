@@ -2,7 +2,7 @@ function setCookie(exhours) {
     var d = new Date();
     d.setTime(d.getTime() + (exhours*60*60*1000));
     var expires = "expires="+d.toUTCString();
-    document.cookie = "visited=true; " + expires + "; domain=irvingthofoundation.github.io; path=/";
+    document.cookie = "visited=true; " + expires + "; path=/";
 }
 
 function getCookie(cname) {
