@@ -107,7 +107,8 @@ function analyzeTime(timeTable, visitorCounter) {
         var timeLocal = UTC2LocalTime(timeUTCID, offsetHours);
         var categoryList = ClassifyTimeCategory(timeNow, timeLocal);
         if (categoryList.length == 0) {
-            counterbase.child(timeUTCID).remove();
+        	var categoryAgain = ClassifyTimeCategory(timeNow, UTC2LocalTime(timeUTCID, 12));
+        	if (categoryAgain.length == 0) counterbase.child(timeUTCID).remove();
             continue;
         }
         for (var i in categoryList) visitorCounter[categoryList[i]] += cnt;
